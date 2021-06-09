@@ -1,0 +1,43 @@
+.user_details{
+    display: flex;
+    justify-content: center;
+ align-items: center;
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 1);
+        background-size: cover;
+    }
+    p{
+        color: rgb(255, 123, 0);
+    }
+}
+.list{
+    li{
+        display: flex;
+        align-items: center;
+    }
+}
+.wrapper{
+    width: 100%;
+    max-width: 1950px;
+    margin: auto;
+    }
+    .span{
+        color: rgb(255, 255, 255)
+    }
+
+.img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.button{
+    background-color: black;
+    color: rgb(255, 123, 0);
+    border:  none;
+    &:hover{
+        cursor: pointer;
+    }
+}

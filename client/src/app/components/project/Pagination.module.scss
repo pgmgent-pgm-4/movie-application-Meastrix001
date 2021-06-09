@@ -1,0 +1,19 @@
+.flex{
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  align-items: baseline;
+
+  h4{
+    margin:1rem  0.2rem ;
+    @media (min-width:800px) {
+      
+    }
+  }
+}
+.paging{
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  align-items: baseline;
+}

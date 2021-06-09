@@ -1,0 +1,77 @@
+.ul{
+  display: flex;
+  padding-inline-start: 0;
+flex-wrap: wrap;
+justify-content: space-between;
+list-style: none;
+}
+.scrollUl{
+  display: flex;
+  padding: 0 55px;
+  overflow-y: auto;
+}
+.scrollList{
+  flex: 0 0 19.7%;
+  text-align: center;
+  margin: 0 2px;
+  transition: transform 300ms ease 100ms;
+  border: 1px solid white;
+
+  &:hover{
+    border: 1px groove black;
+  }
+  
+}
+.list{
+max-width: 100%;
+@media (min-width: 450px) {
+  max-width: 45%;
+  width: 100%;
+transition: 0.125s ease;
+
+}
+@media (min-width: 875px) {
+  max-width: 30%;
+  width: 100%;
+transition: 0.125s ease;
+
+}
+@media (min-width: 1200px) {
+  max-width: 32%;
+  width: 100%;
+transition: 0.125s ease;
+
+}
+@media (min-width: 1600px) {
+  max-width: 23.5%;
+  width: 100%;
+transition: 0.125s ease;
+
+}
+@media (min-width: 1900px) {
+  max-width: 19%;
+  width: 100%;
+transition: 0.125s ease;
+
+}
+}
+.wrapper{
+  max-width: 1950px;
+  margin: auto;
+}
+.img{
+  max-width: 100%;
+}
+h3{
+  position: absolute;
+  bottom: 4px;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  background-color: gray;
+  background-color: rgba(99, 99, 99, 0.892);
+  color: white;
+  box-sizing: border-box;
+  height: 20%;
+  text-align: center;
+}

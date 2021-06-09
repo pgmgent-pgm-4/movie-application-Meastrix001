@@ -1,0 +1,31 @@
+.header {
+    width: 100vw;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+    transition: 0.125s ease;
+    padding: 0 1.25rem;
+    @media (min-width: 1975px) {
+        padding: 0;
+        transition: 0.125s ease;
+    }
+}
+
+.header nav ul li {
+    margin: 0 0.25rem;
+    padding: 0rem 2rem 0rem 0rem;
+}
+
+.header nav ul li a {
+    color: rgb(255, 123, 0);
+    text-decoration: none;
+}
