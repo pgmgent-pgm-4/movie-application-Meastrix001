@@ -19,7 +19,7 @@ function App() {
                   <Route exact path={Routes.MOVIES} component={ MoviesPage }/>
                   <Route exact path={Routes.MOVIE_DETAILS} component={ DetailPage }/>
                   <Route exact path={Routes.SHOWS} component={ ShowsPage }/>
-                  <Route exact path={Routes.SHOW_DETAILS} component={ ShowDetailPage }/>
+                  <Route exact path={Routes.SHOW_DETAILS} component={ ShowDetailPage  }/>
                   <Route exact path={Routes.AUTH_SIGN_IN} component={ SignInPage }/>
                   <Route exact path={Routes.AUTH_SIGN_UP} component={ SignUpPage  }/>
 
