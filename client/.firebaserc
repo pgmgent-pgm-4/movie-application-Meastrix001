@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "moviedatabase"
+    "default": "moviedatabase",
+    "moviedatabasealias": "movie-database-e2c85"
   }
 }
