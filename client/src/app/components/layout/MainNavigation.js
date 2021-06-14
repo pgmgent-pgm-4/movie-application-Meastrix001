@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React,{ useState, useEffect, } from 'react';
+import React,{ useState } from 'react';
 import logo from '../../../assets/images/logo.png'
 import * as Routes from '../../routes';
 import { useAuth } from '../../contexts/firebase/auth.context';

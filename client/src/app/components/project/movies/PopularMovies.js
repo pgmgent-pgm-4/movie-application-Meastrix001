@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../CardList.module.scss';
 import Pagination from '../Pagination'
 import MovieListItem from './MovieListItem';
@@ -21,9 +21,7 @@ const PopularMovies = ({apiKey}) => {
     }
     
     const toggleView = () => {
-      {
         showAll === true ? setShowAll(false) : setShowAll(true)
-      }
     };
     return(
       <div>

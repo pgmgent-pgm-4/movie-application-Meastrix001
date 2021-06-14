@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../CardList.module.scss';
 import Pagination from '../Pagination'
 import MovieListItem from './MovieListItem';
@@ -20,9 +20,7 @@ const UpComingMovies = ({apiKey}) => {
     setCurrentPage(currentPage - 1)
   }
   const toggleView = () => {
-    {
       showAll === true ? setShowAll(false) : setShowAll(true)
-    }
   };
 
     return(

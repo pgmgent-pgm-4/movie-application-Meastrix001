@@ -1,5 +1,4 @@
-import { useAuth } from '../../../contexts/firebase/auth.context';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { TopRatedMovies, PopularMovies, UpComingMovies} from '../movies'
 import { PopularShows, TopRatedShows, OnAirShows} from '../Shows'
 import { LatestRelease, FetchSearchResults } from './index'
@@ -10,7 +9,6 @@ import styles from './Home.module.scss';
 
 // import TopRatedMovies from '../movies/TopRatedMovies'
 const Home = () => {
-  const {currentUser} = useAuth();
   const [text, setText] = useState("")
   const API_KEY = "910c5818cdbaa5582832e8d21687df71"
 console.log(text)

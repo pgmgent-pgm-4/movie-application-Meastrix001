@@ -26,9 +26,7 @@ const handleClickBack = (e) => {
 }
 const toggleView = (e) => {
   e.preventDefault()
-  {
     showAll === true ? setShowAll(false) : setShowAll(true)
-  }
 };
 
   return(

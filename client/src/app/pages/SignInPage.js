@@ -34,7 +34,7 @@ const SignInPage = ({children}) => {
         <SignInPopUp 
         handleSubmit={handleSubmit} 
         handleInputChange={handleInputChange} 
-        signInForm={signInForm.txtEmail, signInForm.txtPassword}
+        signInForm={[signInForm.txtEmail, signInForm.txtPassword]}
         />
       }
         {!!currentUser === true && 

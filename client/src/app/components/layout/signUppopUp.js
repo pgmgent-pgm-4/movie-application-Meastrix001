@@ -5,7 +5,7 @@ import * as Routes from '../../routes';
 
 const SignUpPopUp = ({handleSubmit, handleInputChange, signInForm}) => {
   return (
-    <div className={styles.wrapper, styles.fadeInDown}>
+    <div class={`${styles.wrapper} ${styles.fadeInDown}`}>
             < div className={styles.formContent}>
           <Link to={Routes.AUTH_SIGN_IN}>
             <h2 className={`${styles.inactive} ${styles.underlineHover}`}> Sign In </h2>
@@ -16,17 +16,18 @@ const SignUpPopUp = ({handleSubmit, handleInputChange, signInForm}) => {
             <img src={logo} className={styles.img} id="icon" alt="User Icon" />
           </div>
 
+
           <form onSubmit={(ev) => handleSubmit(ev)}>
-            <input placeholder="Email"  type="email"  className={styles.fadeInSecond, styles.input} id="txtEmail" name="txtEmail"  aria-describedby="emailHelp" onChange={handleInputChange} value={signInForm.txtEmail} />
+            <input placeholder="Email"  type="email"  className={`${styles.fadeInSecond} ${styles.input}`} id="txtEmail" name="txtEmail"  aria-describedby="emailHelp" onChange={handleInputChange} value={signInForm.txtEmail} />
 
-            <input placeholder="Password" type="password" id="password" className={styles.fadeInThird, styles.input} name="txtPassword" onChange={handleInputChange} value={signInForm.txtPassword} />
+            <input placeholder="Password" type="password" id="password" className={`${styles.fadeInThird} ${styles.input}`} name="txtPassword" onChange={handleInputChange} value={signInForm.txtPassword} />
 
-            <input type="submit" className={styles.fadeInFourth, styles.login} value="Log In"></input>
+            <input type="submit" className={`${styles.fadeInFourth} ${styles.login}`} value="Log In"></input>
 
           </form>
 
           <div className={styles.formFooter}>
-          <a className="underlineHover" href="#">Forgot Password?</a>
+          <a  href="#Home" className="underlineHover">Forgot Password?</a>
           </div>
           </div>
           </div>

@@ -47,13 +47,13 @@ return(
     {!!currentUser === true &&
               <form onSubmit={(ev) => handleSubmit(ev)}>
                 <div className={styles.image}>
-                <img src={currentUser.photoURL}></img>
+                <img src={currentUser.photoURL} alt={currentUser.displayName}></img>
                 <h2>{currentUser.displayName}</h2>
                 </div>
                 
                 <div  className={styles.input_container} >
                   <label htmlFor="txtName">User name</label>
-                  <input type="text" placeholder={"current Name:" + " " + currentUser.displayName} className={styles.input} id="txtName" name="txtName"  aria-describedby="emailHelp"    onChange={handleInputChange} value={userInfo.txtName} />
+                  <input type="text" placeholder={`current Name: ${currentUser.displayName}`} className={styles.input} id="txtName" name="txtName"  aria-describedby="emailHelp" onChange={handleInputChange} value={userInfo.txtName} />
                 </div>
 
                 <div  className={styles.input_container}>

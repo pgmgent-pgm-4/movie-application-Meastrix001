@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../CardList.module.scss';
 import Pagination from '../Pagination'
 import ShowListItem from './ShowListItem';
@@ -24,9 +24,7 @@ const handleClickBack = (e) => {
 }
 
 const toggleView = () => {
-  {
     showAll === true ? setShowAll(false) : setShowAll(true)
-  }
 };
 
   return(

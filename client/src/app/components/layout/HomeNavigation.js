@@ -1,15 +1,6 @@
-import {
-  Link
-} from "react-router-dom";
-
-import logo from '../../../assets/images/logo.png'
-
-import * as Routes from '../../routes';
-import { useAuth } from '../../contexts/firebase/auth.context';
 
 import styles from './MainNavigation.module.scss';
 const HomeNavigation = () => {
-  const {currentUser, signOut} = useAuth();
 
   return (
     <nav className={styles.wrapper}>

@@ -3,7 +3,6 @@ import { VscPreview } from "react-icons/vsc";
 import { Link } from 'react-router-dom';
 import * as Routes from '../../../routes';
 import styles from './MovieListItem.module.scss';
-import MOVIE_DETAILS from '../../../routes/index'
 const BASE_PATH_IAMGE = "https://image.tmdb.org/t/p"
 const IMAGE_SIZE = "/w500/"
 

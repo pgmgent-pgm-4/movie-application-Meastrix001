@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 const useFetch = (url, page) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -17,7 +17,7 @@ const useFetch = (url, page) => {
       }
     };
     fetchData();
-  }, [page]);
+  }, [page, url]);
   return { data, error, isLoading };
     };
 

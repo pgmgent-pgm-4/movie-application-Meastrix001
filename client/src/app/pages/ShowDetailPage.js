@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { BaseLayout } from '../layouts';
 import { useFetch } from "../hooks/";
@@ -14,7 +13,7 @@ const DetailPage = () => {
   console.log(SHOW_API)
   // const { getProjectById } = useFirestore();
 
-  const { data, isLoading, error } = useFetch(SHOW_API);
+  const { data, isLoading} = useFetch(SHOW_API);
   console.log(data)
 
   return (

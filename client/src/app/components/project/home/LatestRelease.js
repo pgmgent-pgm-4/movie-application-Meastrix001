@@ -1,4 +1,3 @@
-import React,{ useState } from 'react';
 import { useFetch } from "../../../hooks";
 import * as Routes from '../../../routes/';
 import styles from '../CardList.module.scss';
@@ -10,12 +9,8 @@ const BASE_PATH_IAMGE = "https://image.tmdb.org/t/p"
 const IMAGE_SIZE = "/w500/"
 const LatestRelease = () => {
   const API_KEY = "910c5818cdbaa5582832e8d21687df71"
-  const [text, setText] = useState("")
-  const [currentPage, setCurrentPage] = useState(1)
   const LATEST_MOVIE = `https://api.themoviedb.org/3/movie/latest?api_key=${API_KEY}&backdrop_path=true&language=en-US`
-  const { data, isLoading, error } = useFetch(LATEST_MOVIE, currentPage);
-
-  console.log(data)
+  const { data, isLoading} = useFetch(LATEST_MOVIE);
   return (
     <div className={styles.hero}>
     {
@@ -24,7 +19,7 @@ const LatestRelease = () => {
         <div className={styles.hero_container}>
           <Link className={styles.link} to={Routes.MOVIE_DETAILS.replace(':id', data.id)}>
           <h3>{data.title}</h3>
-          <img src={data.backdrop_path !==null ? BASE_PATH_IAMGE + IMAGE_SIZE + data.backdrop_path : data.poster_path !== null ? BASE_PATH_IAMGE + IMAGE_SIZE + data.poster_path : "https://wallpapercave.com/wp/wp2732950.gif"}/>
+          <img alt="" src={data.backdrop_path !==null ? BASE_PATH_IAMGE + IMAGE_SIZE + data.backdrop_path : data.poster_path !== null ? BASE_PATH_IAMGE + IMAGE_SIZE + data.poster_path : "https://wallpapercave.com/wp/wp2732950.gif"}/>
         </Link> 
         </div>
     }

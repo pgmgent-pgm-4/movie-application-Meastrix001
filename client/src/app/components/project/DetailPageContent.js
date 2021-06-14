@@ -1,24 +1,18 @@
-import { FiEye } from "react-icons/fi";
-import { VscPreview } from "react-icons/vsc";
 import { useFetch } from "../../hooks";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './Details.module.scss';
 
 const DetailPageContent = ({ item, type }) => {
   const CREDITS = `https://api.themoviedb.org/3/${type}/${item.id}/credits?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US`
-  const { data, isLoading, error } = useFetch(CREDITS);
+  const { data } = useFetch(CREDITS);
   const [showAllCast, setShowAllCast] = useState(false)
   const [showAllCrew, setShowAllCrew] = useState(false)
   const creditsData = data
   const toggleViewCast = () => {
-    {
       showAllCast === true ? setShowAllCast(false) : setShowAllCast(true)
-    }
   };
   const toggleViewCrew = () => {
-    {
       showAllCrew === true ? setShowAllCrew(false) : setShowAllCrew(true)
-    }
   };
   return (
     <article className={`${styles.wrapper} ${styles.article}`}>   
@@ -76,8 +70,8 @@ const DetailPageContent = ({ item, type }) => {
               return(
                 <li key={company.id}>
                 { company.logo_path !== null ?
-                  <img className={styles.compLogo} src={`https://image.tmdb.org/t/p/original${company.logo_path}`}></img> :
-                  <img className={styles.compLogo} src={"https://www.scanningpens.com/c.4437431/site/images/noimage.png"}></img> 
+                  <img alt="company logo" className={styles.compLogo} src={`https://image.tmdb.org/t/p/original${company.logo_path}`}></img> :
+                  <img alt="company logo" className={styles.compLogo} src={"https://www.scanningpens.com/c.4437431/site/images/noimage.png"}></img> 
                 }
                 <p>{company.name}</p>
                 </li>
@@ -100,7 +94,7 @@ const DetailPageContent = ({ item, type }) => {
               { creditsData.cast.length !== 0 ? creditsData.cast.map(member => {
                 return(
                   <li key={member.cast_id}>
-                     {member.profile_path !== null ? <img className={styles.userImg} src={`https://image.tmdb.org/t/p/original${member.profile_path}`}></img> : <div className={styles.userImg}></div>}
+                     {member.profile_path !== null ? <img alt="" className={styles.userImg} src={`https://image.tmdb.org/t/p/original${member.profile_path}`}></img> : <div className={styles.userImg}></div>}
 
                     <p>{member.name} <span className={styles.orange}>As</span> {member.character}</p>
                     </li>
@@ -116,7 +110,7 @@ const DetailPageContent = ({ item, type }) => {
               { creditsData.crew.length !== 0 ? creditsData.crew.map(member => {
                 return(
                   <li key={member.id}>
-                     {member.profile_path !== null ? <img className={styles.userImg} src={`https://image.tmdb.org/t/p/original${member.profile_path}`}></img> : <div className={styles.userImg}></div>}
+                     {member.profile_path !== null ? <img alt="" className={styles.userImg} src={`https://image.tmdb.org/t/p/original${member.profile_path}`}></img> : <div className={styles.userImg}></div>}
                     <p>{member.name} <span className={styles.orange}>Job: </span>{member.department}</p>
                     </li>
                 )

@@ -23,16 +23,14 @@ const handleClickBack = (e) => {
 }
 
 const toggleView = () => {
-  {
     showAll === true ? setShowAll(false) : setShowAll(true)
-  }
 };
 
   return(
     <div>
       <div>
         <h4 id="topratedmovies">Top Rated movies</h4>
-        <a onClick={toggleView} className={styles.hover}>{showAll ? "See less" : "See More"}</a>
+        <a href="#Home" onClick={toggleView} className={styles.hover}>{showAll ? "See less" : "See More"}</a>
       </div>
       <ul className={`${showAll ? styles.cardListOpen : styles.cardListClosed} ${styles.ul}`}>
             {
@@ -44,7 +42,7 @@ const toggleView = () => {
           }
       </ul>
       <div className={styles.flex}>
-        <a onClick={toggleView} className={styles.hover}>{showAll ? "See less" : ""}</a>
+        <a href="#Home" onClick={toggleView} className={styles.hover}>{showAll ? "See less" : ""}</a>
         <Pagination catId="#topratedmovies" currentPage={currentPage} handleClick={handleClick} handleClickBack={handleClickBack}/> 
       </div>
   </div>

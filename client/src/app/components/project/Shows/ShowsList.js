@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import React,{ useState  } from 'react';
 import { useFetch } from "../../../hooks";
 import Loading from '../../layout/Loading';
 import Error from '../../layout/Error'
@@ -21,13 +21,11 @@ const MoviesList = () => {
 const handleClick = (e) => {    
   // e.preventDefault();    
   setCurrentPage(currentPage + 1)
-  console.log('The link was clicked.', currentPage);
 }
 
 const handleClickBack = (e) => {    
   // e.preventDefault();    
   setCurrentPage(currentPage - 1)
-  console.log('previous page', currentPage);
 }
 
   return (

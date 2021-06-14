@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../CardList.module.scss';
 import Pagination from '../Pagination'
 import ShowListItem from './ShowListItem';
@@ -14,18 +14,14 @@ const PopularShows = ({apiKey}) => {
 const handleClick = (e) => {    
   // e.preventDefault();    
   setCurrentPage(currentPage + 1)
-  console.log('The link was clicked.', currentPage);
 }
 
 const handleClickBack = (e) => {    
   // e.preventDefault();    
   setCurrentPage(currentPage - 1)
-  console.log('previous page', currentPage);
 }
 const toggleView = () => {
-  {
     showAll === true ? setShowAll(false) : setShowAll(true)
-  }
 };
   return(
     <div>
