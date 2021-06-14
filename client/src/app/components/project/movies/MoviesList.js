@@ -13,7 +13,7 @@ const MoviesList =  () => {
   
   const ALL_API = `https://api.themoviedb.org/3/discover/movie?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US&sort_by=popularity.desc&page=${currentPage}`
     const SEARCH_MOVIES = `https://api.themoviedb.org/3/search/movie?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US&query=${text}&page=${currentPage}&include_adult=false`
-      const {data, error, isLoading}= useFetch(ALL_API, currentPage);
+      const {data, error, isLoading}= useFetch(ALL_API, currentPage );
       
       const handleClick = (e) => {    
         // e.preventDefault();    
