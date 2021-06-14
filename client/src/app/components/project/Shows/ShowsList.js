@@ -21,7 +21,7 @@ const MoviesList = () => {
     console.log(isLoading)
 const handleClick = (e) => {    
   // e.preventDefault();    
-  setCurrentPage(currentPage + 1)
+  setCurrentPage(currentPage + 1 )
 }
 
 const handleClickBack = (e) => {    
