@@ -7,7 +7,6 @@ const BASE_PATH_IAMGE = "https://image.tmdb.org/t/p"
 const IMAGE_SIZE = "/w500/"
 
 const ListItem = ({ data }) => {
-  console.log(data)
   return (
     <article className={styles.list_item}>
         <Link className={styles.link} to={data.name !== undefined ? Routes.SHOW_DETAILS.replace(':id', data.id) : Routes.MOVIE_DETAILS.replace(':id', data.id)}>

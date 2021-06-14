@@ -1,19 +1,32 @@
+.titleing{
+  position: absolute;
+  bottom: 20px;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  background-color: gray;
+  background-color: rgba(99, 99, 99, 0.892);
+  color: white;
+  box-sizing: border-box;
+  height: 20%;
+  text-align: center;
+}
+
+h3{
+  position: absolute;
+  bottom: 20px;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  background-color: gray;
+  background-color: rgba(99, 99, 99, 0.892);
+  color: white;
+  box-sizing: border-box;
+  height: 20%;
+  text-align: center;
+}
 .ListItem {
 
-  h3{
-    position: absolute;
-    bottom: 20px;
-    padding: 1rem;
-    margin: 0;
-    width: 100%;
-    background-color: gray;
-    background-color: rgba(99, 99, 99, 0.892);
-    color: white;
-    box-sizing: border-box;
-    height: 20%;
-    text-align: center;
-  }
-  
   .list{
       display: flex;
       flex-wrap: wrap;

@@ -1,10 +1,38 @@
 .footer {
-    background-color: #CE4760;
+    background-color: black;
     color: white;
     padding: 1.25rem;
-
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    li{
+        width: fit-content;
+        list-style: none;
+        margin: auto;
+    }
+    a{
+        img{
+            width: 4rem;
+        }
+    }
+    ul{
+        padding-inline-start: 0;
+        margin: auto;
+        padding: 1rem 0;
+        @media (min-width: 800px) {
+        }
+        li{
+            list-style: none;
+        }
+    }
     a {
         color: white;
         text-decoration: none;
     }
 }
+.user_avatar{
+    width: 4rem;
+  }

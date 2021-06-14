@@ -6,6 +6,7 @@ import styles from '../CardList.module.scss';
 import Search from '../../layout/Search'
 import FilterShows from './FilterShows'
 import Pagination from '../Pagination'
+import { FetchSearchResults } from '../home'
 
 
 
@@ -15,7 +16,7 @@ const MoviesList = () => {
   const [text, setText] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
   const ALL_API = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&page=${currentPage}&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate`
-
+  const SEARCH_SHOW = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=en-US&page=${currentPage}&query=${text}&include_adult=false`
   const { data, isLoading, error } = useFetch(ALL_API, currentPage);
     console.log(isLoading)
 const handleClick = (e) => {    
@@ -33,7 +34,9 @@ const handleClickBack = (e) => {
       <div>
         <h2>Top rated shows</h2>
         <Search setText={setText} />
-        <h4>{ text }</h4>
+        { text !== "" ? <FetchSearchResults url={SEARCH_SHOW} string={text}/> : ""
+
+        }
       </div>
     {
       error ? <Error>{error}</Error> : isLoading || !data ? <Loading type="TV-Shows"/> : 

@@ -47,22 +47,22 @@ const MainNavigation = () => {
         { window.location.pathname === "/WikiMedia" || window.location.pathname === "/WikiMedia/" ?
       <ul className={`${styles.list} ${open === true ? styles.open : ""}`}>
         <li>
-            <a  onClick={() => setOpen(!open)}href="#topratedmovies">toprated movies</a>
+            <a  onClick={() => setOpen(false)}href="#topratedmovies">toprated movies</a>
           </li>
         <li>
-                    <a  onClick={() => setOpen(!open)}href="#popularmovies">Popular movies</a>
+                    <a  onClick={() => setOpen(false)}href="#popularmovies">Popular movies</a>
                   </li>
         <li>
-                    <a  onClick={() => setOpen(!open)}href="#upcomingrmovies">Upcoming movies</a>
+                    <a  onClick={() => setOpen(false)}href="#upcomingrmovies">Upcoming movies</a>
                   </li>
         <li>
-                  <a  onClick={() => setOpen(!open)}href="#topratedshows">Upcoming movies</a>
+                  <a  onClick={() => setOpen(false)}href="#topratedshows">toprated shows</a>
                   </li>
         <li>
-                  <a  onClick={() => setOpen(!open)}href="#popularshows">Popular movies</a>
+                  <a  onClick={() => setOpen(false)}href="#popularshows">Popular shows</a>
                   </li>
         <li>
-                  <a  onClick={() => setOpen(!open)}href="#airingshows">Shows on air</a>
+                  <a  onClick={() => setOpen(false)}href="#airingshows">Shows on air</a>
                   </li>
       </ul> : ""
         } 

@@ -18,7 +18,7 @@ const LatestRelease = () => {
        
         <div className={styles.hero_container}>
           <Link className={styles.link} to={Routes.MOVIE_DETAILS.replace(':id', data.id)}>
-          <h3>{data.title}</h3>
+          <h3 className={styles.correction}>{data.title}</h3>
           <img alt="" src={data.backdrop_path !==null ? BASE_PATH_IAMGE + IMAGE_SIZE + data.backdrop_path : data.poster_path !== null ? BASE_PATH_IAMGE + IMAGE_SIZE + data.poster_path : "https://wallpapercave.com/wp/wp2732950.gif"}/>
         </Link> 
         </div>
