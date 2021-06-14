@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "moviedatabase",
-    "moviedatabase": "movie-database-e2c85"
+    "default": "moviedatabase"
   }
 }
