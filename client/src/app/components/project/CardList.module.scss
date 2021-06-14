@@ -1,37 +1,57 @@
+.cardListOpen{
+li:nth-child(n+6) {
+  display:list-item;
+}
+}
+.cardListClosed{
+li:nth-child(n+6) {
+  display:none;
+}
+}
+.hover{
+  cursor: pointer;
+  width: fit-content;
+  &:hover{
+    text-decoration: underline black;
+  }
+}
 .ul{
   display: flex;
   padding-inline-start: 0;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-evenly;
 list-style: none;
 }
 .scrollUl{
   display: flex;
   padding: 0 55px;
   overflow-y: auto;
+  padding-inline-start: 0;
 }
 .scrollList{
   flex: 0 0 19.7%;
   text-align: center;
   margin: 0 2px;
-  transition: transform 300ms ease 100ms;
-  border: 1px solid white;
-
-  &:hover{
-    border: 1px groove black;
-  }
-  
+  transition: 0.125s ease all;
+  // border: 1px solid white;
+  list-style: none;
+  z-index: 0;
 }
 .list{
 max-width: 100%;
+box-sizing: border-box;
+&:hover{
+  transform: scale(1.1);
+  z-index: 1;
+} 
 @media (min-width: 450px) {
-  max-width: 45%;
+  max-width: 50%;
   width: 100%;
 transition: 0.125s ease;
 
 }
 @media (min-width: 875px) {
-  max-width: 30%;
+  max-width: 33%;
   width: 100%;
 transition: 0.125s ease;
 
@@ -43,13 +63,13 @@ transition: 0.125s ease;
 
 }
 @media (min-width: 1600px) {
-  max-width: 23.5%;
+  max-width: 25%;
   width: 100%;
 transition: 0.125s ease;
 
 }
 @media (min-width: 1900px) {
-  max-width: 19%;
+  max-width: 20%;
   width: 100%;
 transition: 0.125s ease;
 
@@ -74,4 +94,38 @@ h3{
   box-sizing: border-box;
   height: 20%;
   text-align: center;
+}
+.flex{
+  @media (min-width:800px) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.title{
+  font-size: 1.2rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: rgb(255, 123, 0);
+  transition: 0.125s ease all;
+    @media (min-width:800px) {
+      font-size: 2rem;
+}
+}
+.hero{
+  .hero_container{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    a{
+      h3{
+        box-sizing: border-box;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
 }

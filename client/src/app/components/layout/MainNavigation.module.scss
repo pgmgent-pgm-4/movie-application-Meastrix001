@@ -1,7 +1,8 @@
-.user_details{
+.user_details {
     display: flex;
     justify-content: center;
- align-items: center;
+    align-items: center;
+
     img {
         width: 32px;
         height: 32px;
@@ -9,35 +10,227 @@
         border: 2px solid rgba(255, 255, 255, 1);
         background-size: cover;
     }
-    p{
+
+    p {
         color: rgb(255, 123, 0);
     }
 }
-.list{
-    li{
+
+header nav {
+    padding: 0 0.5rem;
+    margin: 0 0 0 auto;
+    height: 8vh;
+    position: relative;
+
+    @media (min-width: 1600px) {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: unset;
+        height: 100vh;
+        position: relative;
+
+        @media (min-width: 600px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @media (min-width: 1600px) {
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 600px) {
+                width: 50%;
+            }
+
+            li {
+                width: fit-content;
+                margin: 0.5rem auto;
+            }
+
+            @media (min-width: 1600px) {
+                flex-direction: row;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            padding: 0 0.5rem;
+            height: 8vh;
+            position: relative;
+        }
+    }
+
+    &.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        height: 100vh;
+        position: relative;
+
+        @media (min-width: 600px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @media (min-width: 1600px) {
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 600px) {
+                width: 50%;
+            }
+
+            li {
+                width: fit-content;
+                margin: 0.5rem auto;
+            }
+
+            @media (min-width: 1600px) {
+                flex-direction: row;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            padding: 0 0.5rem;
+            height: 8vh;
+            position: relative;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        padding: 0 0.5rem;
+        margin: 0 0 0 auto;
+        height: 8vh;
+        position: relative;
     }
 }
-.wrapper{
+
+.list {
+    display: flex;
+    list-style: none;
+    transition: 0.125s ease;
+    padding: 0 1.25rem;
+    position: absolute;
+    top: -15rem;
+    @media (min-width: 1600px) {
+        position: relative;
+        top: 0;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        margin: 0 0.25rem;
+        padding: 0rem 2rem 0rem 0rem;
+
+        a {
+            color: rgb(255, 123, 0);
+            text-decoration: none;
+            font-size: .9rem;
+
+        }
+    }
+
+    @media (min-width: 1600px) {
+        position: relative;
+        top: 0;
+    }
+    
+    &.open {
+        position: relative;
+        top: 0;
+    }
+}
+
+.wrapper {
     width: 100%;
     max-width: 1950px;
     margin: auto;
-    }
-    .span{
-        color: rgb(255, 255, 255)
-    }
+}
 
-.img{
+.span {
+    color: rgb(255, 255, 255)
+}
+
+.img {
     width: 2rem;
     height: 2rem;
 }
 
-.button{
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
     background-color: black;
     color: rgb(255, 123, 0);
-    border:  none;
-    &:hover{
+    border: none;
+
+    &:hover {
         cursor: pointer;
+    }
+}
+
+.hamburger {
+    height: fit-content;
+    width: fit-content;
+    margin: auto 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    @media (min-width: 1600px) {
+        display: none;
+    }
+
+    div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        padding: 0 1.25rem;
+    }
+
+    &.open {
+        display: none;
+    }
+}
+
+.hamburgerClose {
+    height: fit-content;
+    width: fit-content;
+    margin: auto 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+
+    @media (min-width: 1600px) {
+        display: none;
+    }
+
+    div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+    div:first-child {
+        transform: rotate(45deg);
+        background-color: red
+    }
+
+    div:last-child {
+        transform: rotate(-45deg);
+        background-color: red
     }
 }

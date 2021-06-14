@@ -1,10 +1,10 @@
 import styles from './Pagination.module.scss';
 
-const Pagination = ({ pages, currentPage, handleClick, handleClickBack}) => {
+const Pagination = ({catId, pages, currentPage, handleClick, handleClickBack}) => {
   return (
     <div className={styles.paging}>
       { currentPage !== 1 ?
-      <a className={styles.flex} href="#" onClick={handleClickBack}>
+      <a className={`${styles.flex} ${styles.hover}`} href={catId} onClick={handleClickBack}>
         <h4>{currentPage - 2 > 0 ? currentPage -2 : ""}</h4>
         <h4>{currentPage - 1 > 0 ? currentPage -1 : 0}</h4>
         <h4> last page</h4>
@@ -12,9 +12,11 @@ const Pagination = ({ pages, currentPage, handleClick, handleClickBack}) => {
       }
       { currentPage !== pages ?
 
-      <a className={styles.flex} href="#" onClick={handleClick}>
+      <a className={`${styles.flex} ${styles.hover}`} href={catId} onClick={handleClick}>
         <h4> Next page</h4>
         <h4>{currentPage !== pages ? currentPage + 1 : ""}</h4>
+        <h4>{currentPage + 2 !== pages ? currentPage + 2 : ""}</h4>
+
       </a>
        : ""}
     </div>

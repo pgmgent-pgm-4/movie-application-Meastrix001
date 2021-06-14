@@ -1,7 +1,6 @@
 import React,{ useState, useEffect, } from 'react';
-// import { useFirestore } from "../../../contexts/firebase/firestore.context";
-// import { allMovies } from "../../../contexts/movieApi/index";
-// import MovieListItem from './MovieListItem';
+import { useFetch } from "../../../hooks";
+
 import Loading from '../../layout/Loading';
 import Error from '../../layout/Error'
 import Search from '../../layout/Search'
@@ -16,33 +15,13 @@ import Pagination from '../Pagination'
 
 const MoviesList =  () => {
   const [text, setText] = useState("")
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1)
 
   const API = "https://api.themoviedb.org/3/discover/movie?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
   
-  const ALL_API = `https://api.themoviedb.org/3/discover/movie?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US&sort_by=release_date.desc&include_adult=false&include_video=false&page=${currentPage}&with_watch_monetization_types=flatrate`
+  const ALL_API = `https://api.themoviedb.org/3/discover/movie?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US&sort_by=popularity.desc&page=${currentPage}`
 
-  useEffect(() => {
-      getData();
-  }, [isLoading, currentPage]);
-
-  const getData = async () => {
-      try {
-          const response = await fetch(ALL_API);
-          if (!response.ok) {
-              setError('There went something wrong, are you sure the API link is right?');
-          }
-          const data = await response.json();
-          setData(data);
-      } catch(err) {
-          setError(err)
-      } finally {
-          setIsLoading(false);
-        }
-      }
+      const {data, error, isLoading}= useFetch(ALL_API, currentPage);
       
       const handleClick = (e) => {    
         // e.preventDefault();    
@@ -67,7 +46,7 @@ const MoviesList =  () => {
       error ? <Error>{error}</Error> : isLoading || !data ? <Loading type="movies"/> : 
         <div>
           <FilterMovies text={text} data={data}/>
-          <Pagination currentPage={currentPage} handleClick={handleClick} handleClickBack={handleClickBack}/> 
+          <Pagination pages={data.total_pages} currentPage={currentPage} handleClick={handleClick} handleClickBack={handleClickBack}/> 
         </div>
     }
     </div>

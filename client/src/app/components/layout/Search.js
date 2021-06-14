@@ -1,15 +1,21 @@
 import React from 'react';
+import { useState } from 'react';
+import styles from './searchBar.module.scss'
 
 const SearchBar = ({text, setText}) => {
-  const BarStyling = {width:"20rem",background:"black",color:"#ff7b00", border:"none", padding:"0.5rem"};
+
   return (
-    <input 
-     style={BarStyling}
-     key=""
-     value={text}
-     placeholder="Type to search..."
-     onChange={(event) => {setText(event.target.value)}}
-    />
+    <div className={styles.searbar_container}>
+      <input 
+       key=""
+       value={text}
+       placeholder="Type to search..."
+       onChange={(e) => {setText(e.target.value)}}
+      />
+      <button type="search">
+        Search
+     </button>
+    </div>
   );
 }
 export default SearchBar

@@ -1,0 +1,43 @@
+.searbar_container{
+  width: 100%;
+  display: flex;
+  margin: auto;
+  transition: 0.125s ease all;
+  @media (min-width: 800px) {
+  width: 60%;
+  }
+  @media (min-width: 1200px) {
+    width: 40%;
+    }
+    @media (min-width: 1600px) {
+      width:30%;
+      }
+  input {
+    width: 100%;
+    border: 3px solid rgb(255, 123, 0);
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  button {
+    width: fit-content;
+    height: 36px;
+    border: 1px solid rgb(255, 123, 0);
+    background: rgb(255, 123, 0);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+}

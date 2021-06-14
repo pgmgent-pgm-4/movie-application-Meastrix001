@@ -1,7 +1,6 @@
 .flex{
   display: flex;
   width: fit-content;
-  margin: auto;
   align-items: baseline;
 
   h4{
@@ -13,7 +12,14 @@
 }
 .paging{
   display: flex;
-  width: fit-content;
+  width: 100%;
   margin: auto;
   align-items: baseline;
+  justify-content: space-between;
+  @media (min-width:800px) {
+    width: 90%;
+  }
+}
+.hover{
+  cursor: pointer;
 }

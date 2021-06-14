@@ -1,10 +1,18 @@
 .MovieListItem {
-    overflow:hidden;
-    max-width: 100%;
-    border: 1px solid #e3e3e3;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background-color: #fff;
+    h3{
+      position: absolute;
+      bottom: 4px;
+      padding: 1rem;
+      margin: 0;
+      width: 100%;
+      background-color: gray;
+      background-color: rgba(99, 99, 99, 0.892);
+      color: white;
+      box-sizing: border-box;
+      height: 20%;
+      text-align: center;
+    }
+    
     .list{
         display: flex;
         flex-wrap: wrap;
@@ -63,17 +71,3 @@
     .img{
       max-width: 100%;
     }
-    h3{
-      position: absolute;
-      bottom: 4px;
-      padding: 1rem;
-      margin: 0;
-      width: 100%;
-      background-color: gray;
-      background-color: rgba(99, 99, 99, 0.892);
-      color: white;
-      box-sizing: border-box;
-      height: 20%;
-      text-align: center;
-    }
-    

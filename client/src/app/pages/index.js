@@ -6,6 +6,7 @@ import ShowsPage from './ShowsPage';
 import ShowDetailPage from './ShowDetailPage';
 import Account from './Account'
 import SignInPage from './SignInPage';
+import SignUpPage from './SignUpPage'
 
 export {
   HomePage,
@@ -16,4 +17,5 @@ export {
   ShowDetailPage,
   SignInPage,
   Account,
+  SignUpPage
 };

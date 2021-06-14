@@ -2,15 +2,15 @@ import styles from './signInPopUp.module.scss'
 import logo from '../../../assets/images/logo.png'
 import { Link } from "react-router-dom";
 import * as Routes from '../../routes';
-const SignInPopUp = ({handleSubmit, handleInputChange, signInForm}) => {
-  return (
-    <div class={styles.wrapper, styles.fadeInDown}>
-            < div className={styles.formContent}>
 
-          <h2 className={styles.active}> Sign In </h2>
-          <Link to={Routes.AUTH_SIGN_UP}>
-            <h2 className={styles.inactive, styles.underlineHover}>Sign Up </h2>
+const SignUpPopUp = ({handleSubmit, handleInputChange, signInForm}) => {
+  return (
+    <div className={styles.wrapper, styles.fadeInDown}>
+            < div className={styles.formContent}>
+          <Link to={Routes.AUTH_SIGN_IN}>
+            <h2 className={`${styles.inactive} ${styles.underlineHover}`}> Sign In </h2>
           </Link>
+          <h2 className={`${styles.active} ${styles.underlineHover}`}>Sign Up </h2>
 
           <div className={styles.fadeInFirst}>
             <img src={logo} className={styles.img} id="icon" alt="User Icon" />
@@ -32,4 +32,4 @@ const SignInPopUp = ({handleSubmit, handleInputChange, signInForm}) => {
           </div>
   )
 }
-export default SignInPopUp
+export default SignUpPopUp

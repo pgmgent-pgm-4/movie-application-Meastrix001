@@ -1,5 +1,11 @@
 import Home from './Home';
+import LatestRelease from './LatestRelease';
+import SearchAPI from './SearchAPI';
+import FetchSearchResults from './FetchSearchResults';
 
 export {
- Home
+ Home,
+ LatestRelease,
+ SearchAPI,
+ FetchSearchResults
 }

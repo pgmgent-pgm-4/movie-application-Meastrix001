@@ -2,7 +2,10 @@ import MoviesList from './MoviesList';
 import FilterMovies from './FilterMovies'
 import filterShows from './FilterMovies'
 import MovieListItem from './MovieListItem'
-import LatestMovies from './LatestMovies'
+import TopRatedMovies from './TopRatedMovies'
+import PopularMovies from './PopularMovies'
+import UpComingMovies from './UpComingMovies'
+
 
 
 export {
@@ -10,5 +13,7 @@ export {
   FilterMovies,
   filterShows,
   MovieListItem,
-  LatestMovies
+  TopRatedMovies,
+  PopularMovies,
+  UpComingMovies,
 }

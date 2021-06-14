@@ -6,5 +6,6 @@ export const SHOWS = '/shows';
 export const ACCOUNT = '/account';
 export const SHOW_DETAILS = '/show/:id';
 export const AUTH_SIGN_IN = '/auth/sigin';
+export const AUTH_SIGN_UP = '/auth/sigup'
 export const AUTH_SIGN_OUT = '/auth/signout';
 export const FOUROFOUR = '/404';

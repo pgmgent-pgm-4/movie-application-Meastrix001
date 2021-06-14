@@ -1,11 +1,9 @@
-import ProjectDetails from './ProjectDetails';
-import ProjectReviewList from './ProjectReviewList';
 import Pagination from './Pagination'
-
-
+import DetailPageContent from './DetailPageContent'
+import ListItem from './ListItem'
 
 export {
-  ProjectDetails,
-  ProjectReviewList,
   Pagination,
+  DetailPageContent,
+  ListItem
 }

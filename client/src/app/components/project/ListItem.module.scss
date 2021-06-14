@@ -1,13 +1,8 @@
-.ShowListItem {
-  overflow:hidden;
-  max-width: 100%;
-  border: 1px solid #e3e3e3;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  background-color: #fff;
+.ListItem {
+
   h3{
     position: absolute;
-    bottom: 4px;
+    bottom: 20px;
     padding: 1rem;
     margin: 0;
     width: 100%;
@@ -65,6 +60,7 @@
   position: relative;
   transition: 0.125s ease;
   list-style: none;
+  height: 100%;
   &.link{
       position: relative;
       

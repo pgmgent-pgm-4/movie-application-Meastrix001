@@ -1,45 +1,27 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { ProjectDetails, ProjectReviewList } from "../components/project";
-import { useFirestore } from "../contexts/firebase/firestore.context";
 import { BaseLayout } from '../layouts';
-import { FetchMedia} from '../contexts/movieApi'
+import { useFetch } from "../hooks/";
+import { DetailPageContent } from '../components/project/' 
+import { Loading } from '../components/layout';
+
 
 const DetailPage = () => {
-  const { id } = useParams();
-  console.log(id)
-  const [ mediaObj, setMediaObj ] = useState();
-    const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const MOVIE_API = `https://api.themoviedb.org/3/find/${id}?api_key=910c5818cd baa5582832e8d21687df71&language=en-US&external_source=imdb_id`
+  const { id, movie } = useParams();
+  console.log(id, movie)
+  const MOVIE_API = `https://api.themoviedb.org/3/movie/${id}?api_key=910c5818cdbaa5582832e8d21687df71&language=en-US&append_to_response=video`
+  console.log(MOVIE_API)
   // const { getProjectById } = useFirestore();
 
-  useEffect(() => {
-    fetchData();
-
-  }, [id])
-
-  const fetchData = async () => {
-    console.log("fetching details")
-    try {
-      const response = await fetch(MOVIE_API);
-      if (!response.ok) {
-          setError('There went something wrong, are you sure the API link is right?');
-      }
-      const data = await response.json();
-      setMediaObj(data);
-  } catch(err) {
-      setError(err)
-    } finally {
-      setIsLoading(false);
-      console.log(mediaObj)
-    }
-  };
+  const { data, isLoading, error } = useFetch(MOVIE_API);
+console.log(data)
   return (
     
     <BaseLayout>
-      {/* {!!mediaObj && <ProjectDetails project={mediaObj} /> } */}
-      {/* {!!mediaObj && <ProjectReviewList projectId={mediaObj.id} /> } */}
+    { isLoading || !data ? <Loading/>  :
+
+        <DetailPageContent type="movie" item={data}/>
+    }
     </BaseLayout>
   );
 };
