@@ -14,7 +14,7 @@ const DetailPage = () => {
     <BaseLayout>
     { isLoading || !data ? <Loading/>  :
 
-        <DetailPageContent type="movie" item={data}/>
+        <DetailPageContent type="movie" item={data} />
     }
     </BaseLayout>
   );
