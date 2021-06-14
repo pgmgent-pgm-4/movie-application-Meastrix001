@@ -16,7 +16,7 @@ function App() {
               <Switch>
                   <Route exact path={Routes.LANDING} component={ HomePage }/>
                   <Route from={Routes.HOME} to={Routes.HOME}/>
-                  <Route exact path={Routes.MOVIES} component={ MoviesPage }/>
+                  <Route exact path={Routes.MOVIES} component={ MoviesPage  }/>
                   <Route exact path={Routes.MOVIE_DETAILS} component={ DetailPage  }/>
                   <Route exact path={Routes.SHOWS} component={ ShowsPage }/>
                   <Route exact path={Routes.SHOW_DETAILS} component={ ShowDetailPage  }/>
