@@ -14,7 +14,7 @@ function App() {
           <FirestoreProvider>
             <Router basename={'WikiMedia'}>
               <Switch>
-                  <Route exact path={Routes.LANDING} component={ HomePage }/>
+                  <Route exact path={Routes.LANDING} component={ HomePage  }/>
                   <Route from={Routes.HOME} to={Routes.HOME}/>
                   <Route exact path={Routes.MOVIES} component={ MoviesPage }/>
                   <Route exact path={Routes.MOVIE_DETAILS} component={ DetailPage }/>
