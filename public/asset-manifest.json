@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/WikiMedia/static/css/main.54a3bbc3.chunk.css",
+    "main.js": "/WikiMedia/static/js/main.8329dfe0.chunk.js",
+    "main.js.map": "/WikiMedia/static/js/main.8329dfe0.chunk.js.map",
+    "runtime-main.js": "/WikiMedia/static/js/runtime-main.0c45cbe0.js",
+    "runtime-main.js.map": "/WikiMedia/static/js/runtime-main.0c45cbe0.js.map",
+    "static/js/2.94cf2ec7.chunk.js": "/WikiMedia/static/js/2.94cf2ec7.chunk.js",
+    "static/js/2.94cf2ec7.chunk.js.map": "/WikiMedia/static/js/2.94cf2ec7.chunk.js.map",
+    "static/js/3.9551c8ce.chunk.js": "/WikiMedia/static/js/3.9551c8ce.chunk.js",
+    "static/js/3.9551c8ce.chunk.js.map": "/WikiMedia/static/js/3.9551c8ce.chunk.js.map",
+    "index.html": "/WikiMedia/index.html",
+    "static/css/main.54a3bbc3.chunk.css.map": "/WikiMedia/static/css/main.54a3bbc3.chunk.css.map",
+    "static/js/2.94cf2ec7.chunk.js.LICENSE.txt": "/WikiMedia/static/js/2.94cf2ec7.chunk.js.LICENSE.txt",
+    "static/media/NotFoundPage.module.scss": "/WikiMedia/static/media/fof_background.b8e410e1.jpg",
+    "static/media/logo.196c1167.png": "/WikiMedia/static/media/logo.196c1167.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c45cbe0.js",
+    "static/js/2.94cf2ec7.chunk.js",
+    "static/css/main.54a3bbc3.chunk.css",
+    "static/js/main.8329dfe0.chunk.js"
+  ]
+}
