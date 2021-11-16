@@ -11,8 +11,8 @@ import { FetchSearchResults } from '../home'
 
 
 
-const MoviesList = () => {
-  const API_KEY = "910c5818cdbaa5582832e8d21687df71 "
+const ShowsList = () => {
+  const API_KEY = "910c5818cdbaa5582832e8d21687df71" 
   const [text, setText] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
   const ALL_API = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&page=${currentPage}&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate`
@@ -49,4 +49,4 @@ const handleClickBack = (e) => {
   );
 }
 
-export default MoviesList;
+export default ShowsList;

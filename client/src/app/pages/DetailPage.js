@@ -13,6 +13,7 @@ const DetailPage = () => {
     
     <BaseLayout>
     { isLoading || !data ? <Loading/>  :
+    
 
         <DetailPageContent type="movie" item={data} />
     }
